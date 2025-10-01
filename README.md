@@ -126,4 +126,13 @@ param_dict = {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 
 param = {'n_estimators': 300, 'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.7}
 ```
 
+## 실험 결과
+| Model         | AVG    | pos_0  | pos_1  | pos_2  | pos_3  | pos_4  |
+| ------------- | ------ | ------ | ------ | ------ | ------ | ------ |
+| Random Forest | 44.57% | 37.96% | 50.97% | 48.12% | 44.86% | 40.96% |
+| XGBoost       | 47.45% | 38.70% | 56.42% | 49.23% | 47.09% | 45.83% |
+| Transformer   | 49.85% | 42.87% | 58.22% | 53.77% | 48.09% | 46.29% |
+| ConMaskFormer | 52.02% | 45.09% | 59.87% | 56.11% | 51.60% | 47.42% |
+
+
 ##### 각 코드는 해당 폴더에서 ```python main.py```로 실행
