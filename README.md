@@ -59,16 +59,9 @@ data/data_split/
    - test 구간이 맨 앞/맨 뒤면 train은 연속 구간 하나로 저장, 중간이면 train을 두 조각(train_0, train_1) 으로 분리 저장
 2. 정규화 통계
    - 모든 train 구간의 0을 제외한 RSSI만 모아 global min/max 계산(누수 방지)
-   - 모든 train 구간을 모아 beacon_cols(예: B1..B5)의 값을 한데 모읍니다.
-
-값 0은 결측으로 간주하고 통계에서 제외합니다.
-
-남은 값으로 **global min, max**를 계산합니다.
-
-3. 정규화 & 저장
-   - ```x_norm = (x - min) / (max - min)``` (단, x==0 → 0 유지)
-   - raw/norm 버전을 각각 train/test로 저장
-5. 슬라이딩 윈도우 & NPZ
+   - 값 0은 결측으로 간주하고 통계에서 제외
+   - 남은 값으로 **global min, max** 계산
+4. 슬라이딩 윈도우 & NPZ
    - 정규화 CSV에서 윈도우 생성 → ```(N, window, (#beacons+1))``` 배열로 단일 NPZ 저장, 마지막 열은 Zone
 
 #### 실행 방법
