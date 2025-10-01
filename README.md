@@ -1,17 +1,31 @@
 # ConfMaskFormer
-신호 결측에 강건한 비컨 기반 실내 위치 추정 딥러닝 모델
+#### 신호 결측에 강건한 비컨 기반 실내 위치 추정 딥러닝 모델
 
-### 데이터 수집 환경
+## 데이터 수집 환경
 - 장소: 인천대학교 정보기술대학 7호관 3층
 - 구조: 직선형 복도(길이 70.6m, 폭 2.5m, 천장 높이 3.3m)
 - 위치: 3m 간격의 24개 구역
 - 비컨: 15m 간격의 5개 천장 설치
+- 수집 방법: 각 위치 내에서 연속적으로 이동하며 데이터 수집
   
-![Pipeline](img/map.png)
+<img src="img/map.png" alt="Pipeline" width="500">
 
 
-### 데이터 전처리(data_split.py)
-BLE RSSI 시계열 CSV를 대상으로 5-분할 스플릿 → 글로벌 Min-Max 정규화(0=결측 보존) → 슬라이딩 윈도우 → .csv/.npz 저장
+## 데이터 형태
+- 각 위치마다 776개, 총 18,624개 데이터 확보
+- -infinity는 수신되지 않은 신호로 0으로 대체하여 활용
+  
+|     B1    |     B2    |     B3    |     B4    |     B5    | Zone |
+| :-------: | :-------: | :-------: | :-------: | :-------: | :--: |
+| -infinity | -infinity | -infinity | -infinity |    -88    |   1  |
+| -infinity |    -83    | -infinity |    -86    | -infinity |   1  |
+| -infinity | -infinity |    -84    |    -86    | -infinity |   1  |
+| -infinity |    -84    |    -90    |    -88    | -infinity |   1  |
+|    -70    | -infinity | -infinity | -infinity | -infinity |   1  |
+
+
+## 데이터 전처리(data_split.py)
+BLE RSSI 시계열 CSV를 대상으로 5-fold 스플릿 → Min-Max 정규화(0=결측 보존) → 슬라이딩 윈도우 → .csv/.npz 저장
 #### 입출력 개요
 입력: ```./data/in-motion/*.csv```
 출력
@@ -24,8 +38,8 @@ BLE RSSI 시계열 CSV를 대상으로 5-분할 스플릿 → 글로벌 Min-Max 
 ```text
 data/
 └─ in-motion/
-   ├─ seq_01.csv
-   ├─ seq_02.csv
+   ├─ 1.csv
+   ├─ 2.csv
    └─ ...
 data/data_split/
 ├─ raw/
@@ -40,10 +54,17 @@ data/data_split/
 ```
 #### 파이프라인
 1. K-fold
-   - 각 CSV를 길이 기준으로 5등분 → 선택된 한 구간을 test, 나머지를 train
-   - test가 시작/끝이면 train은 연속 구간, 중간이면 train을 두 구간(train_0, train_1)으로 분리 저장
+   - 각 CSV 길이를 L이라 할 때, 동일 길이로 5등분(≈L/5)
+   - pos_k (k=0..4) 스플릿에서 k번째 구간을 test, 나머지를 train으로 사용
+   - test 구간이 맨 앞/맨 뒤면 train은 연속 구간 하나로 저장, 중간이면 train을 두 조각(train_0, train_1) 으로 분리 저장
 2. 정규화 통계
    - 모든 train 구간의 0을 제외한 RSSI만 모아 global min/max 계산(누수 방지)
+   - 모든 train 구간을 모아 beacon_cols(예: B1..B5)의 값을 한데 모읍니다.
+
+값 0은 결측으로 간주하고 통계에서 제외합니다.
+
+남은 값으로 **global min, max**를 계산합니다.
+
 3. 정규화 & 저장
    - ```x_norm = (x - min) / (max - min)``` (단, x==0 → 0 유지)
    - raw/norm 버전을 각각 train/test로 저장
@@ -65,5 +86,52 @@ Sliding window: in-motion/pos_0/test:  100%|████| ...
 ✅ Saved ./data/data_split/npz/in-motion/test_pos_0.npz  :  2345 samples
 ```
 
+## ConfMaskFormer Parameter
+```python
+class Cfg:
+    window_size     = 10
+    embedding_dim   = 96
+    n_heads         = 8
+    n_layers        = 2
+    dropout         = 0.3
+    lr              = 1e-3
+    weight_decay    = 1e-3
+    batch_size      = 256
+    epochs          = 100
+    alpha_neighbor  = 0.20
+    aux_mask_ratio  = 0.30
+    aux_loss_weight = 0.40
+    beacon_dropout_p= 0.30
+    num_workers     = 0
+    seed            = 42
+```
 
+## Transformer Parameter
+```python
+class Config:
+    def __init__(self):
+        self.window_size = 10
+        self.embedding_dim = 32
+        self.n_heads = 8
+        self.n_layers = 2
+        self.dropout = 0.5
+        self.n_beacons = 5
+        self.n_classes = 24
+        self.batch_size = 256
+        self.num_epochs = 300
+        self.lr = 1e-3
+        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.seed = 42
+```
 
+## Random Forest Parameter
+```python
+param_dict = {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300}
+```
+
+## XGBoost Parameter
+```python
+param = {'n_estimators': 300, 'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.7}
+```
+
+##### 각 코드는 해당 폴더에서 ```python main.py```로 실행
