@@ -7,7 +7,7 @@
 - 위치: 3m 간격의 24개 구역
 - 비컨: 15m 간격의 5개 천장 설치
   
-![Pipeline](docs/img/map.png)
+![Pipeline](img/map.png)
 
 
 ### 데이터 전처리(data_split.py)
