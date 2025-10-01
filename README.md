@@ -61,7 +61,7 @@ data/data_split/
    - 모든 train 구간의 0을 제외한 RSSI만 모아 global min/max 계산(누수 방지)
    - 값 0은 결측으로 간주하고 통계에서 제외
    - 남은 값으로 **global min, max** 계산
-4. 슬라이딩 윈도우 & NPZ
+3. 슬라이딩 윈도우 & NPZ
    - 정규화 CSV에서 윈도우 생성 → ```(N, window, (#beacons+1))``` 배열로 단일 NPZ 저장, 마지막 열은 Zone
 
 #### 실행 방법
