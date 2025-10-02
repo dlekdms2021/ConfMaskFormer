@@ -1,19 +1,21 @@
 # ConfMaskFormer
 #### 신호 결측에 강건한 비컨 기반 실내 위치 추정 딥러닝 모델
+5-fold 교차 검증으로 Random Forest, XGBoost, Transformer와 ConfMaskFormer를 비교 평가한다.
 
 ## 데이터 수집 환경
 - 장소: 인천대학교 정보기술대학 7호관 3층
 - 구조: 직선형 복도(길이 70.6m, 폭 2.5m, 천장 높이 3.3m)
-- 위치: 3m 간격의 24개 구역
-- 비컨: 15m 간격의 5개 천장 설치
-- 수집 방법: 각 위치 내에서 연속적으로 이동하며 데이터 수집
+- 위치: 3m 간격의 24개 구역(Zone=1 ... 24)
+- 비컨: 15m 간격의 천장 5개(B1 ... B5)
+- 수집 방법: 각 위치 내에서 연속적으로 이동하며 RSSI 시계열 데이터 수집
   
 <img src="img/map.png" alt="Pipeline" width="500">
 
 
 ## 데이터 형태
 - 각 위치마다 776개, 총 18,624개 데이터 확보
-- -infinity는 수신되지 않은 신호로 0으로 대체하여 활용
+- -infinity는 수신되지 않은 신호로 0으로 대체하여 활용(0은 결측 의미)
+- 0은 관측 마스크로 사용되고, 정규화에서 제외
   
 |     B1    |     B2    |     B3    |     B4    |     B5    | Zone |
 | :-------: | :-------: | :-------: | :-------: | :-------: | :--: |
@@ -25,15 +27,17 @@
 
 
 ## 데이터 전처리(data_split.py)
-BLE RSSI 시계열 CSV를 대상으로 5-fold 스플릿 → Min-Max 정규화(0=결측 보존) → 슬라이딩 윈도우 → .csv/.npz 저장
-#### 입출력 개요
+BLE RSSI 시계열 CSV를 대상으로 5-fold 분할 → Min-Max 정규화(결측 보존) → 슬라이딩 윈도우 → .csv/.npz 저장
+#### 입출력
 입력: ```./data/in-motion/*.csv```
 출력
 - 분할된 원본/정규화 CSV
      ```./data/data_split/{raw|norm}/<dataset>/<split>/<phase>/*.csv```
 - 슬라이딩 윈도우 NPZ
      ```./data/data_split/npz/<dataset>/{train|test}_{split}.npz```
-- ```<dataset>```: 입력 폴더명(in-motion), ```<split>```: pos_0~pos_4, ```<phase>```: train|test
+- ```<dataset>```: 입력 폴더명(in-motion)
+- ```<split>```: pos_0~pos_4
+- ```<phase>```: train|test
 #### 폴더 구조 예시
 ```text
 data/
@@ -53,13 +57,13 @@ data/data_split/
       └─ ...
 ```
 #### 파이프라인
-1. K-fold
-   - 각 CSV 길이를 L이라 할 때, 동일 길이로 5등분(≈L/5)
+1. K-fold 분할
+   - 각 CSV 길이 ```L```을 기준으로, 동일 길이로 5등분(≈L/5)
    - pos_k (k=0..4) 스플릿에서 k번째 구간을 test, 나머지를 train으로 사용
    - test 구간이 맨 앞/맨 뒤면 train은 연속 구간 하나로 저장, 중간이면 train을 두 조각(train_0, train_1) 으로 분리 저장
 2. 정규화 통계
    - 모든 train 구간의 0을 제외한 RSSI만 모아 global min/max 계산(누수 방지)
-   - 값 0은 결측으로 간주하고 통계에서 제외
+   - 정규화 시 0은 결측으로 간주하고 통계에서 제외(0 유지)
 3. 슬라이딩 윈도우 & NPZ
    - 정규화 CSV에서 윈도우 생성 → ```(N, window, (#beacons+1))``` 배열로 단일 NPZ 저장, 마지막 열은 Zone
 
