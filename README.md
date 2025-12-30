@@ -1,6 +1,6 @@
 # ConfMaskFormer
 #### 신호 결측에 강건한 비컨 기반 실내 위치 추정 딥러닝 모델
-5-fold 교차 검증으로 Random Forest, XGBoost, Transformer와 ConfMaskFormer를 비교 평가한다.
+5-fold 교차 검증으로 Random Forest, XGBoost, Transformer, STraTS와 ConfMaskFormer를 비교 평가한다.
 
 ## 데이터 수집 환경
 - 장소: 인천대학교 정보기술대학 7호관 3층
