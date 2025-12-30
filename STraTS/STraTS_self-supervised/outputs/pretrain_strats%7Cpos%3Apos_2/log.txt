@@ -1,0 +1,222 @@
+
+16/11/2025 22:40:12 >> Namespace(dataset='beacon', run='1o1', beacon_data_root='./data_split_beacon_strats/final_pt/in-motion', pos_split='pos_2', pretrain_val_frac=0.1, model_type='strats', max_obs=880, hid_dim=32, num_layers=2, num_heads=4, dropout=0.2, attention_dropout=0.2, output_dir='./outputs/pretrain_strats|pos:pos_2', output_dir_prefix='pretrain_', seed=2023, max_epochs=50, lr=0.0005, train_batch_size=16, eval_batch_size=32, num_classes=24, logger=<utils.Logger object at 0x71391d75d250>)
+
+16/11/2025 22:40:12 >> [BeaconPretrainDataset] loaded from ./data_split_beacon_strats/final_pt/in-motion/strats_pos_2.pt
+  pos_split = pos_2
+  #unsup train = 16178
+  #unsup val   = 1798
+  V (beacons)  = 5
+
+16/11/2025 22:40:13 >> Model details:
+16/11/2025 22:40:13 >> # parameters: 19121
+16/11/2025 22:40:13 >> # trainable parameters: 19121, 100.0%
+16/11/2025 22:40:13 >> #params by dtype:
+16/11/2025 22:40:13 >> torch.float32: 19121, 100.0%
+
+16/11/2025 22:40:13 >> No. of training batches per epoch = 1012
+
+16/11/2025 22:40:26 >> [pretrain-train] epoch 1 | loss=0.8106
+
+16/11/2025 22:40:26 >> [val] | avg MSE loss=0.6063
+
+16/11/2025 22:40:26 >> Saving ckpt at ./outputs/pretrain_strats|pos:pos_2/checkpoint_best.bin
+
+16/11/2025 22:40:36 >> [pretrain-train] epoch 2 | loss=0.7016
+
+16/11/2025 22:40:36 >> [val] | avg MSE loss=0.6122
+
+16/11/2025 22:40:47 >> [pretrain-train] epoch 3 | loss=0.6946
+
+16/11/2025 22:40:47 >> [val] | avg MSE loss=0.5969
+
+16/11/2025 22:40:47 >> Saving ckpt at ./outputs/pretrain_strats|pos:pos_2/checkpoint_best.bin
+
+16/11/2025 22:40:57 >> [pretrain-train] epoch 4 | loss=0.7009
+
+16/11/2025 22:40:57 >> [val] | avg MSE loss=0.6162
+
+16/11/2025 22:41:07 >> [pretrain-train] epoch 5 | loss=0.7102
+
+16/11/2025 22:41:07 >> [val] | avg MSE loss=0.6152
+
+16/11/2025 22:41:17 >> [pretrain-train] epoch 6 | loss=0.7230
+
+16/11/2025 22:41:17 >> [val] | avg MSE loss=0.5985
+
+16/11/2025 22:41:27 >> [pretrain-train] epoch 7 | loss=0.7318
+
+16/11/2025 22:41:27 >> [val] | avg MSE loss=0.6110
+
+16/11/2025 22:41:37 >> [pretrain-train] epoch 8 | loss=0.7404
+
+16/11/2025 22:41:37 >> [val] | avg MSE loss=0.6139
+
+16/11/2025 22:41:47 >> [pretrain-train] epoch 9 | loss=0.7594
+
+16/11/2025 22:41:47 >> [val] | avg MSE loss=0.6497
+
+16/11/2025 22:41:57 >> [pretrain-train] epoch 10 | loss=0.7759
+
+16/11/2025 22:41:57 >> [val] | avg MSE loss=0.6810
+
+16/11/2025 22:42:07 >> [pretrain-train] epoch 11 | loss=0.7817
+
+16/11/2025 22:42:07 >> [val] | avg MSE loss=0.6944
+
+16/11/2025 22:42:17 >> [pretrain-train] epoch 12 | loss=0.7929
+
+16/11/2025 22:42:17 >> [val] | avg MSE loss=0.6525
+
+16/11/2025 22:42:27 >> [pretrain-train] epoch 13 | loss=0.8141
+
+16/11/2025 22:42:27 >> [val] | avg MSE loss=0.6636
+
+16/11/2025 22:42:37 >> [pretrain-train] epoch 14 | loss=0.8150
+
+16/11/2025 22:42:37 >> [val] | avg MSE loss=0.7087
+
+16/11/2025 22:42:47 >> [pretrain-train] epoch 15 | loss=0.8215
+
+16/11/2025 22:42:47 >> [val] | avg MSE loss=0.6983
+
+16/11/2025 22:42:57 >> [pretrain-train] epoch 16 | loss=0.8267
+
+16/11/2025 22:42:57 >> [val] | avg MSE loss=0.6713
+
+16/11/2025 22:43:07 >> [pretrain-train] epoch 17 | loss=0.8500
+
+16/11/2025 22:43:07 >> [val] | avg MSE loss=0.7015
+
+16/11/2025 22:43:17 >> [pretrain-train] epoch 18 | loss=0.8637
+
+16/11/2025 22:43:17 >> [val] | avg MSE loss=0.6832
+
+16/11/2025 22:43:31 >> [pretrain-train] epoch 19 | loss=0.8608
+
+16/11/2025 22:43:32 >> [val] | avg MSE loss=0.7191
+
+16/11/2025 22:43:41 >> [pretrain-train] epoch 20 | loss=0.8786
+
+16/11/2025 22:43:42 >> [val] | avg MSE loss=0.7336
+
+16/11/2025 22:43:52 >> [pretrain-train] epoch 21 | loss=0.8880
+
+16/11/2025 22:43:52 >> [val] | avg MSE loss=0.8105
+
+16/11/2025 22:44:02 >> [pretrain-train] epoch 22 | loss=0.8772
+
+16/11/2025 22:44:02 >> [val] | avg MSE loss=0.7587
+
+16/11/2025 22:44:12 >> [pretrain-train] epoch 23 | loss=0.8844
+
+16/11/2025 22:44:12 >> [val] | avg MSE loss=0.7658
+
+16/11/2025 22:44:27 >> [pretrain-train] epoch 24 | loss=0.8910
+
+16/11/2025 22:44:27 >> [val] | avg MSE loss=0.7917
+
+16/11/2025 22:44:39 >> [pretrain-train] epoch 25 | loss=0.8921
+
+16/11/2025 22:44:40 >> [val] | avg MSE loss=0.7537
+
+16/11/2025 22:44:50 >> [pretrain-train] epoch 26 | loss=0.9071
+
+16/11/2025 22:44:50 >> [val] | avg MSE loss=0.8205
+
+16/11/2025 22:45:00 >> [pretrain-train] epoch 27 | loss=0.9196
+
+16/11/2025 22:45:00 >> [val] | avg MSE loss=0.8250
+
+16/11/2025 22:45:12 >> [pretrain-train] epoch 28 | loss=0.9013
+
+16/11/2025 22:45:13 >> [val] | avg MSE loss=0.7857
+
+16/11/2025 22:45:25 >> [pretrain-train] epoch 29 | loss=0.9065
+
+16/11/2025 22:45:25 >> [val] | avg MSE loss=0.7683
+
+16/11/2025 22:45:41 >> [pretrain-train] epoch 30 | loss=0.9149
+
+16/11/2025 22:45:41 >> [val] | avg MSE loss=0.8337
+
+16/11/2025 22:45:54 >> [pretrain-train] epoch 31 | loss=0.9107
+
+16/11/2025 22:45:54 >> [val] | avg MSE loss=0.8295
+
+16/11/2025 22:46:05 >> [pretrain-train] epoch 32 | loss=0.9271
+
+16/11/2025 22:46:05 >> [val] | avg MSE loss=0.9107
+
+16/11/2025 22:46:15 >> [pretrain-train] epoch 33 | loss=0.9201
+
+16/11/2025 22:46:15 >> [val] | avg MSE loss=0.8457
+
+16/11/2025 22:46:25 >> [pretrain-train] epoch 34 | loss=0.9311
+
+16/11/2025 22:46:25 >> [val] | avg MSE loss=0.8155
+
+16/11/2025 22:46:36 >> [pretrain-train] epoch 35 | loss=0.9208
+
+16/11/2025 22:46:36 >> [val] | avg MSE loss=0.8375
+
+16/11/2025 22:46:46 >> [pretrain-train] epoch 36 | loss=0.9189
+
+16/11/2025 22:46:46 >> [val] | avg MSE loss=0.8501
+
+16/11/2025 22:46:55 >> [pretrain-train] epoch 37 | loss=0.9224
+
+16/11/2025 22:46:56 >> [val] | avg MSE loss=0.8810
+
+16/11/2025 22:47:05 >> [pretrain-train] epoch 38 | loss=0.9486
+
+16/11/2025 22:47:06 >> [val] | avg MSE loss=0.8406
+
+16/11/2025 22:47:14 >> [pretrain-train] epoch 39 | loss=0.9290
+
+16/11/2025 22:47:15 >> [val] | avg MSE loss=0.8644
+
+16/11/2025 22:47:23 >> [pretrain-train] epoch 40 | loss=0.9384
+
+16/11/2025 22:47:23 >> [val] | avg MSE loss=0.9355
+
+16/11/2025 22:47:31 >> [pretrain-train] epoch 41 | loss=0.9728
+
+16/11/2025 22:47:32 >> [val] | avg MSE loss=0.8587
+
+16/11/2025 22:47:40 >> [pretrain-train] epoch 42 | loss=0.9397
+
+16/11/2025 22:47:40 >> [val] | avg MSE loss=0.8567
+
+16/11/2025 22:47:50 >> [pretrain-train] epoch 43 | loss=0.9251
+
+16/11/2025 22:47:50 >> [val] | avg MSE loss=0.8953
+
+16/11/2025 22:47:58 >> [pretrain-train] epoch 44 | loss=0.9307
+
+16/11/2025 22:47:59 >> [val] | avg MSE loss=0.9045
+
+16/11/2025 22:48:07 >> [pretrain-train] epoch 45 | loss=0.9447
+
+16/11/2025 22:48:07 >> [val] | avg MSE loss=0.9332
+
+16/11/2025 22:48:15 >> [pretrain-train] epoch 46 | loss=0.9356
+
+16/11/2025 22:48:16 >> [val] | avg MSE loss=0.9008
+
+16/11/2025 22:48:26 >> [pretrain-train] epoch 47 | loss=0.9451
+
+16/11/2025 22:48:26 >> [val] | avg MSE loss=0.9078
+
+16/11/2025 22:48:34 >> [pretrain-train] epoch 48 | loss=0.9208
+
+16/11/2025 22:48:34 >> [val] | avg MSE loss=0.8274
+
+16/11/2025 22:48:43 >> [pretrain-train] epoch 49 | loss=0.9284
+
+16/11/2025 22:48:43 >> [val] | avg MSE loss=0.8328
+
+16/11/2025 22:48:51 >> [pretrain-train] epoch 50 | loss=0.9427
+
+16/11/2025 22:48:51 >> [val] | avg MSE loss=0.8311
+
+16/11/2025 22:48:51 >> [Pretrain] Best epoch: 3 | best val loss=0.5969

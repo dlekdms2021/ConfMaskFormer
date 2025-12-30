@@ -1,0 +1,596 @@
+
+16/11/2025 23:13:54 >> Namespace(dataset='beacon', train_frac=0.5, run='1o10', beacon_data_root='./data_split_beacon_strats/final_pt/in-motion', pos_split='pos_1', val_frac=0.0, model_type='strats', load_ckpt_path='./outputs/pretrain_strats|pos:pos_1/checkpoint_best.bin', max_obs=880, hid_dim=32, num_layers=2, num_heads=4, dropout=0.2, attention_dropout=0.2, output_dir='./outputs/strats|pos:pos_1', output_dir_prefix='', seed=2023, max_epochs=100, lr=0.0005, train_batch_size=16, gradient_accumulation_steps=1, eval_batch_size=32, logger=<utils.Logger object at 0x7570305f5010>)
+
+16/11/2025 23:13:55 >> [BeaconDataset] loaded from ./data_split_beacon_strats/final_pt/in-motion/strats_pos_1.pt
+  pos_split = pos_1
+  #train = 14472
+  #val   = 0
+  #test  = 3504
+  #classes = 24
+
+16/11/2025 23:13:55 >> Loading pretrained weights from ./outputs/pretrain_strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:13:55 >> Model details:
+16/11/2025 23:13:55 >> # parameters: 19121
+16/11/2025 23:13:55 >> # trainable parameters: 19121, 100.0%
+16/11/2025 23:13:55 >> #params by dtype:
+16/11/2025 23:13:55 >> torch.float32: 19121, 100.0%
+
+16/11/2025 23:13:55 >> No. of training batches per epoch = 905
+
+16/11/2025 23:14:03 >> [train] epoch 1 | loss=2.3109
+
+16/11/2025 23:14:04 >> [test] | loss=1.8624, acc=0.2663
+16/11/2025 23:14:04 >> [test] epoch 1 | loss=1.8624, acc=0.2663, macroF1=0.2092
+
+16/11/2025 23:14:05 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:14:13 >> [train] epoch 2 | loss=2.0806
+
+16/11/2025 23:14:13 >> [test] | loss=1.7991, acc=0.2905
+16/11/2025 23:14:13 >> [test] epoch 2 | loss=1.7991, acc=0.2905, macroF1=0.2197
+
+16/11/2025 23:14:15 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:14:24 >> [train] epoch 3 | loss=2.0362
+
+16/11/2025 23:14:24 >> [test] | loss=1.7685, acc=0.3231
+16/11/2025 23:14:24 >> [test] epoch 3 | loss=1.7685, acc=0.3231, macroF1=0.2578
+
+16/11/2025 23:14:25 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:14:32 >> [train] epoch 4 | loss=1.9719
+
+16/11/2025 23:14:33 >> [test] | loss=1.7816, acc=0.2797
+16/11/2025 23:14:33 >> [test] epoch 4 | loss=1.7816, acc=0.2797, macroF1=0.2260
+
+16/11/2025 23:14:40 >> [train] epoch 5 | loss=1.9421
+
+16/11/2025 23:14:40 >> [test] | loss=1.7277, acc=0.3273
+16/11/2025 23:14:40 >> [test] epoch 5 | loss=1.7277, acc=0.3273, macroF1=0.2745
+
+16/11/2025 23:14:41 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:14:48 >> [train] epoch 6 | loss=1.8987
+
+16/11/2025 23:14:49 >> [test] | loss=1.6886, acc=0.3213
+16/11/2025 23:14:49 >> [test] epoch 6 | loss=1.6886, acc=0.3213, macroF1=0.2651
+
+16/11/2025 23:14:56 >> [train] epoch 7 | loss=1.8812
+
+16/11/2025 23:14:56 >> [test] | loss=1.6652, acc=0.3536
+16/11/2025 23:14:56 >> [test] epoch 7 | loss=1.6652, acc=0.3536, macroF1=0.3135
+
+16/11/2025 23:14:57 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:15:04 >> [train] epoch 8 | loss=1.8526
+
+16/11/2025 23:15:05 >> [test] | loss=1.6477, acc=0.3642
+16/11/2025 23:15:05 >> [test] epoch 8 | loss=1.6477, acc=0.3642, macroF1=0.3377
+
+16/11/2025 23:15:06 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:15:13 >> [train] epoch 9 | loss=1.8365
+
+16/11/2025 23:15:13 >> [test] | loss=1.6608, acc=0.3485
+16/11/2025 23:15:13 >> [test] epoch 9 | loss=1.6608, acc=0.3485, macroF1=0.3203
+
+16/11/2025 23:15:20 >> [train] epoch 10 | loss=1.8057
+
+16/11/2025 23:15:21 >> [test] | loss=1.6386, acc=0.3613
+16/11/2025 23:15:21 >> [test] epoch 10 | loss=1.6386, acc=0.3613, macroF1=0.3184
+
+16/11/2025 23:15:28 >> [train] epoch 11 | loss=1.7935
+
+16/11/2025 23:15:28 >> [test] | loss=1.6151, acc=0.3653
+16/11/2025 23:15:28 >> [test] epoch 11 | loss=1.6151, acc=0.3653, macroF1=0.3180
+
+16/11/2025 23:15:35 >> [train] epoch 12 | loss=1.7848
+
+16/11/2025 23:15:36 >> [test] | loss=1.5862, acc=0.3696
+16/11/2025 23:15:36 >> [test] epoch 12 | loss=1.5862, acc=0.3696, macroF1=0.3360
+
+16/11/2025 23:15:43 >> [train] epoch 13 | loss=1.7806
+
+16/11/2025 23:15:43 >> [test] | loss=1.5666, acc=0.4007
+16/11/2025 23:15:43 >> [test] epoch 13 | loss=1.5666, acc=0.4007, macroF1=0.3746
+
+16/11/2025 23:15:44 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:15:55 >> [train] epoch 14 | loss=1.7757
+
+16/11/2025 23:15:56 >> [test] | loss=1.6057, acc=0.3716
+16/11/2025 23:15:56 >> [test] epoch 14 | loss=1.6057, acc=0.3716, macroF1=0.3356
+
+16/11/2025 23:16:06 >> [train] epoch 15 | loss=1.7598
+
+16/11/2025 23:16:07 >> [test] | loss=1.6245, acc=0.3390
+16/11/2025 23:16:07 >> [test] epoch 15 | loss=1.6245, acc=0.3390, macroF1=0.2869
+
+16/11/2025 23:16:14 >> [train] epoch 16 | loss=1.7435
+
+16/11/2025 23:16:14 >> [test] | loss=1.6086, acc=0.3856
+16/11/2025 23:16:14 >> [test] epoch 16 | loss=1.6086, acc=0.3856, macroF1=0.3623
+
+16/11/2025 23:16:21 >> [train] epoch 17 | loss=1.7267
+
+16/11/2025 23:16:21 >> [test] | loss=1.5591, acc=0.3964
+16/11/2025 23:16:21 >> [test] epoch 17 | loss=1.5591, acc=0.3964, macroF1=0.3629
+
+16/11/2025 23:16:35 >> [train] epoch 18 | loss=1.7132
+
+16/11/2025 23:16:35 >> [test] | loss=1.5829, acc=0.3690
+16/11/2025 23:16:35 >> [test] epoch 18 | loss=1.5829, acc=0.3690, macroF1=0.3273
+
+16/11/2025 23:16:44 >> [train] epoch 19 | loss=1.7060
+
+16/11/2025 23:16:45 >> [test] | loss=1.5047, acc=0.4041
+16/11/2025 23:16:45 >> [test] epoch 19 | loss=1.5047, acc=0.4041, macroF1=0.3816
+
+16/11/2025 23:16:46 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:16:54 >> [train] epoch 20 | loss=1.6960
+
+16/11/2025 23:16:54 >> [test] | loss=1.5298, acc=0.3830
+16/11/2025 23:16:54 >> [test] epoch 20 | loss=1.5298, acc=0.3830, macroF1=0.3466
+
+16/11/2025 23:17:01 >> [train] epoch 21 | loss=1.6818
+
+16/11/2025 23:17:02 >> [test] | loss=1.5021, acc=0.4104
+16/11/2025 23:17:02 >> [test] epoch 21 | loss=1.5021, acc=0.4104, macroF1=0.3953
+
+16/11/2025 23:17:03 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:17:10 >> [train] epoch 22 | loss=1.6661
+
+16/11/2025 23:17:10 >> [test] | loss=1.5156, acc=0.4201
+16/11/2025 23:17:10 >> [test] epoch 22 | loss=1.5156, acc=0.4201, macroF1=0.3926
+
+16/11/2025 23:17:17 >> [train] epoch 23 | loss=1.6765
+
+16/11/2025 23:17:17 >> [test] | loss=1.5029, acc=0.4044
+16/11/2025 23:17:17 >> [test] epoch 23 | loss=1.5029, acc=0.4044, macroF1=0.3629
+
+16/11/2025 23:17:25 >> [train] epoch 24 | loss=1.6513
+
+16/11/2025 23:17:26 >> [test] | loss=1.5049, acc=0.4215
+16/11/2025 23:17:26 >> [test] epoch 24 | loss=1.5049, acc=0.4215, macroF1=0.4009
+
+16/11/2025 23:17:27 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:17:34 >> [train] epoch 25 | loss=1.6442
+
+16/11/2025 23:17:35 >> [test] | loss=1.4756, acc=0.4070
+16/11/2025 23:17:35 >> [test] epoch 25 | loss=1.4756, acc=0.4070, macroF1=0.3914
+
+16/11/2025 23:17:41 >> [train] epoch 26 | loss=1.6543
+
+16/11/2025 23:17:42 >> [test] | loss=1.4807, acc=0.4247
+16/11/2025 23:17:42 >> [test] epoch 26 | loss=1.4807, acc=0.4247, macroF1=0.4062
+
+16/11/2025 23:17:43 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:17:50 >> [train] epoch 27 | loss=1.6350
+
+16/11/2025 23:17:51 >> [test] | loss=1.4788, acc=0.4061
+16/11/2025 23:17:51 >> [test] epoch 27 | loss=1.4788, acc=0.4061, macroF1=0.3817
+
+16/11/2025 23:17:58 >> [train] epoch 28 | loss=1.6217
+
+16/11/2025 23:17:58 >> [test] | loss=1.4533, acc=0.4189
+16/11/2025 23:17:58 >> [test] epoch 28 | loss=1.4533, acc=0.4189, macroF1=0.3988
+
+16/11/2025 23:18:05 >> [train] epoch 29 | loss=1.6259
+
+16/11/2025 23:18:06 >> [test] | loss=1.4745, acc=0.4135
+16/11/2025 23:18:06 >> [test] epoch 29 | loss=1.4745, acc=0.4135, macroF1=0.3828
+
+16/11/2025 23:18:12 >> [train] epoch 30 | loss=1.6153
+
+16/11/2025 23:18:13 >> [test] | loss=1.4290, acc=0.4381
+16/11/2025 23:18:13 >> [test] epoch 30 | loss=1.4290, acc=0.4381, macroF1=0.4218
+
+16/11/2025 23:18:14 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:18:21 >> [train] epoch 31 | loss=1.6227
+
+16/11/2025 23:18:21 >> [test] | loss=1.4537, acc=0.4364
+16/11/2025 23:18:21 >> [test] epoch 31 | loss=1.4537, acc=0.4364, macroF1=0.4127
+
+16/11/2025 23:18:29 >> [train] epoch 32 | loss=1.6124
+
+16/11/2025 23:18:30 >> [test] | loss=1.4682, acc=0.4304
+16/11/2025 23:18:30 >> [test] epoch 32 | loss=1.4682, acc=0.4304, macroF1=0.4088
+
+16/11/2025 23:18:39 >> [train] epoch 33 | loss=1.6190
+
+16/11/2025 23:18:39 >> [test] | loss=1.4603, acc=0.4238
+16/11/2025 23:18:39 >> [test] epoch 33 | loss=1.4603, acc=0.4238, macroF1=0.4031
+
+16/11/2025 23:18:49 >> [train] epoch 34 | loss=1.6142
+
+16/11/2025 23:18:49 >> [test] | loss=1.4327, acc=0.4329
+16/11/2025 23:18:49 >> [test] epoch 34 | loss=1.4327, acc=0.4329, macroF1=0.4032
+
+16/11/2025 23:18:57 >> [train] epoch 35 | loss=1.5995
+
+16/11/2025 23:18:57 >> [test] | loss=1.4155, acc=0.4506
+16/11/2025 23:18:57 >> [test] epoch 35 | loss=1.4155, acc=0.4506, macroF1=0.4253
+
+16/11/2025 23:18:58 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:19:06 >> [train] epoch 36 | loss=1.6045
+
+16/11/2025 23:19:06 >> [test] | loss=1.4414, acc=0.4332
+16/11/2025 23:19:06 >> [test] epoch 36 | loss=1.4414, acc=0.4332, macroF1=0.4141
+
+16/11/2025 23:19:14 >> [train] epoch 37 | loss=1.5883
+
+16/11/2025 23:19:14 >> [test] | loss=1.4456, acc=0.4404
+16/11/2025 23:19:14 >> [test] epoch 37 | loss=1.4456, acc=0.4404, macroF1=0.4142
+
+16/11/2025 23:19:22 >> [train] epoch 38 | loss=1.5928
+
+16/11/2025 23:19:23 >> [test] | loss=1.4116, acc=0.4398
+16/11/2025 23:19:23 >> [test] epoch 38 | loss=1.4116, acc=0.4398, macroF1=0.4285
+
+16/11/2025 23:19:24 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:19:31 >> [train] epoch 39 | loss=1.5805
+
+16/11/2025 23:19:32 >> [test] | loss=1.4284, acc=0.4167
+16/11/2025 23:19:32 >> [test] epoch 39 | loss=1.4284, acc=0.4167, macroF1=0.4054
+
+16/11/2025 23:19:39 >> [train] epoch 40 | loss=1.5745
+
+16/11/2025 23:19:39 >> [test] | loss=1.4189, acc=0.4498
+16/11/2025 23:19:39 >> [test] epoch 40 | loss=1.4189, acc=0.4498, macroF1=0.4319
+
+16/11/2025 23:19:40 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:19:47 >> [train] epoch 41 | loss=1.5930
+
+16/11/2025 23:19:48 >> [test] | loss=1.3899, acc=0.4435
+16/11/2025 23:19:48 >> [test] epoch 41 | loss=1.3899, acc=0.4435, macroF1=0.4224
+
+16/11/2025 23:19:55 >> [train] epoch 42 | loss=1.5805
+
+16/11/2025 23:19:56 >> [test] | loss=1.3762, acc=0.4772
+16/11/2025 23:19:56 >> [test] epoch 42 | loss=1.3762, acc=0.4772, macroF1=0.4634
+
+16/11/2025 23:19:57 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:20:04 >> [train] epoch 43 | loss=1.5806
+
+16/11/2025 23:20:04 >> [test] | loss=1.4137, acc=0.4412
+16/11/2025 23:20:04 >> [test] epoch 43 | loss=1.4137, acc=0.4412, macroF1=0.4236
+
+16/11/2025 23:20:11 >> [train] epoch 44 | loss=1.5804
+
+16/11/2025 23:20:12 >> [test] | loss=1.3931, acc=0.4546
+16/11/2025 23:20:12 >> [test] epoch 44 | loss=1.3931, acc=0.4546, macroF1=0.4325
+
+16/11/2025 23:20:19 >> [train] epoch 45 | loss=1.5734
+
+16/11/2025 23:20:19 >> [test] | loss=1.3802, acc=0.4521
+16/11/2025 23:20:19 >> [test] epoch 45 | loss=1.3802, acc=0.4521, macroF1=0.4382
+
+16/11/2025 23:20:26 >> [train] epoch 46 | loss=1.5650
+
+16/11/2025 23:20:26 >> [test] | loss=1.4073, acc=0.4381
+16/11/2025 23:20:26 >> [test] epoch 46 | loss=1.4073, acc=0.4381, macroF1=0.4223
+
+16/11/2025 23:20:33 >> [train] epoch 47 | loss=1.5651
+
+16/11/2025 23:20:34 >> [test] | loss=1.3962, acc=0.4569
+16/11/2025 23:20:34 >> [test] epoch 47 | loss=1.3962, acc=0.4569, macroF1=0.4449
+
+16/11/2025 23:20:41 >> [train] epoch 48 | loss=1.5714
+
+16/11/2025 23:20:41 >> [test] | loss=1.3831, acc=0.4481
+16/11/2025 23:20:41 >> [test] epoch 48 | loss=1.3831, acc=0.4481, macroF1=0.4276
+
+16/11/2025 23:20:48 >> [train] epoch 49 | loss=1.5661
+
+16/11/2025 23:20:49 >> [test] | loss=1.4030, acc=0.4478
+16/11/2025 23:20:49 >> [test] epoch 49 | loss=1.4030, acc=0.4478, macroF1=0.4353
+
+16/11/2025 23:20:55 >> [train] epoch 50 | loss=1.5699
+
+16/11/2025 23:20:56 >> [test] | loss=1.3652, acc=0.4489
+16/11/2025 23:20:56 >> [test] epoch 50 | loss=1.3652, acc=0.4489, macroF1=0.4348
+
+16/11/2025 23:21:03 >> [train] epoch 51 | loss=1.5596
+
+16/11/2025 23:21:03 >> [test] | loss=1.3677, acc=0.4626
+16/11/2025 23:21:03 >> [test] epoch 51 | loss=1.3677, acc=0.4626, macroF1=0.4515
+
+16/11/2025 23:21:10 >> [train] epoch 52 | loss=1.5505
+
+16/11/2025 23:21:10 >> [test] | loss=1.3985, acc=0.4469
+16/11/2025 23:21:10 >> [test] epoch 52 | loss=1.3985, acc=0.4469, macroF1=0.4382
+
+16/11/2025 23:21:17 >> [train] epoch 53 | loss=1.5561
+
+16/11/2025 23:21:18 >> [test] | loss=1.3843, acc=0.4700
+16/11/2025 23:21:18 >> [test] epoch 53 | loss=1.3843, acc=0.4700, macroF1=0.4558
+
+16/11/2025 23:21:25 >> [train] epoch 54 | loss=1.5559
+
+16/11/2025 23:21:25 >> [test] | loss=1.3854, acc=0.4509
+16/11/2025 23:21:25 >> [test] epoch 54 | loss=1.3854, acc=0.4509, macroF1=0.4450
+
+16/11/2025 23:21:32 >> [train] epoch 55 | loss=1.5546
+
+16/11/2025 23:21:32 >> [test] | loss=1.3770, acc=0.4612
+16/11/2025 23:21:32 >> [test] epoch 55 | loss=1.3770, acc=0.4612, macroF1=0.4457
+
+16/11/2025 23:21:39 >> [train] epoch 56 | loss=1.5623
+
+16/11/2025 23:21:40 >> [test] | loss=1.3789, acc=0.4546
+16/11/2025 23:21:40 >> [test] epoch 56 | loss=1.3789, acc=0.4546, macroF1=0.4408
+
+16/11/2025 23:21:47 >> [train] epoch 57 | loss=1.5587
+
+16/11/2025 23:21:47 >> [test] | loss=1.4185, acc=0.4298
+16/11/2025 23:21:47 >> [test] epoch 57 | loss=1.4185, acc=0.4298, macroF1=0.4073
+
+16/11/2025 23:21:54 >> [train] epoch 58 | loss=1.5710
+
+16/11/2025 23:21:55 >> [test] | loss=1.4280, acc=0.4141
+16/11/2025 23:21:55 >> [test] epoch 58 | loss=1.4280, acc=0.4141, macroF1=0.3924
+
+16/11/2025 23:22:02 >> [train] epoch 59 | loss=1.5359
+
+16/11/2025 23:22:02 >> [test] | loss=1.4220, acc=0.4258
+16/11/2025 23:22:02 >> [test] epoch 59 | loss=1.4220, acc=0.4258, macroF1=0.4137
+
+16/11/2025 23:22:09 >> [train] epoch 60 | loss=1.5509
+
+16/11/2025 23:22:09 >> [test] | loss=1.3790, acc=0.4595
+16/11/2025 23:22:09 >> [test] epoch 60 | loss=1.3790, acc=0.4595, macroF1=0.4483
+
+16/11/2025 23:22:17 >> [train] epoch 61 | loss=1.5475
+
+16/11/2025 23:22:17 >> [test] | loss=1.4031, acc=0.4318
+16/11/2025 23:22:17 >> [test] epoch 61 | loss=1.4031, acc=0.4318, macroF1=0.4149
+
+16/11/2025 23:22:24 >> [train] epoch 62 | loss=1.5442
+
+16/11/2025 23:22:24 >> [test] | loss=1.3812, acc=0.4706
+16/11/2025 23:22:24 >> [test] epoch 62 | loss=1.3812, acc=0.4706, macroF1=0.4631
+
+16/11/2025 23:22:30 >> [train] epoch 63 | loss=1.5397
+
+16/11/2025 23:22:31 >> [test] | loss=1.3614, acc=0.4743
+16/11/2025 23:22:31 >> [test] epoch 63 | loss=1.3614, acc=0.4743, macroF1=0.4643
+
+16/11/2025 23:22:32 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:22:39 >> [train] epoch 64 | loss=1.5399
+
+16/11/2025 23:22:40 >> [test] | loss=1.3700, acc=0.4700
+16/11/2025 23:22:40 >> [test] epoch 64 | loss=1.3700, acc=0.4700, macroF1=0.4586
+
+16/11/2025 23:22:46 >> [train] epoch 65 | loss=1.5442
+
+16/11/2025 23:22:47 >> [test] | loss=1.4080, acc=0.4543
+16/11/2025 23:22:47 >> [test] epoch 65 | loss=1.4080, acc=0.4543, macroF1=0.4380
+
+16/11/2025 23:22:54 >> [train] epoch 66 | loss=1.5323
+
+16/11/2025 23:22:54 >> [test] | loss=1.3314, acc=0.4826
+16/11/2025 23:22:54 >> [test] epoch 66 | loss=1.3314, acc=0.4826, macroF1=0.4695
+
+16/11/2025 23:22:55 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:23:03 >> [train] epoch 67 | loss=1.5272
+
+16/11/2025 23:23:03 >> [test] | loss=1.4114, acc=0.4623
+16/11/2025 23:23:03 >> [test] epoch 67 | loss=1.4114, acc=0.4623, macroF1=0.4509
+
+16/11/2025 23:23:16 >> [train] epoch 68 | loss=1.5408
+
+16/11/2025 23:23:16 >> [test] | loss=1.3687, acc=0.4549
+16/11/2025 23:23:16 >> [test] epoch 68 | loss=1.3687, acc=0.4549, macroF1=0.4443
+
+16/11/2025 23:23:24 >> [train] epoch 69 | loss=1.5373
+
+16/11/2025 23:23:25 >> [test] | loss=1.4032, acc=0.4412
+16/11/2025 23:23:25 >> [test] epoch 69 | loss=1.4032, acc=0.4412, macroF1=0.4284
+
+16/11/2025 23:23:32 >> [train] epoch 70 | loss=1.5370
+
+16/11/2025 23:23:32 >> [test] | loss=1.3750, acc=0.4609
+16/11/2025 23:23:32 >> [test] epoch 70 | loss=1.3750, acc=0.4609, macroF1=0.4499
+
+16/11/2025 23:23:40 >> [train] epoch 71 | loss=1.5318
+
+16/11/2025 23:23:41 >> [test] | loss=1.3483, acc=0.4666
+16/11/2025 23:23:41 >> [test] epoch 71 | loss=1.3483, acc=0.4666, macroF1=0.4521
+
+16/11/2025 23:23:48 >> [train] epoch 72 | loss=1.5291
+
+16/11/2025 23:23:49 >> [test] | loss=1.3599, acc=0.4612
+16/11/2025 23:23:49 >> [test] epoch 72 | loss=1.3599, acc=0.4612, macroF1=0.4462
+
+16/11/2025 23:23:56 >> [train] epoch 73 | loss=1.5339
+
+16/11/2025 23:23:57 >> [test] | loss=1.3520, acc=0.4612
+16/11/2025 23:23:57 >> [test] epoch 73 | loss=1.3520, acc=0.4612, macroF1=0.4506
+
+16/11/2025 23:24:04 >> [train] epoch 74 | loss=1.5324
+
+16/11/2025 23:24:05 >> [test] | loss=1.3616, acc=0.4552
+16/11/2025 23:24:05 >> [test] epoch 74 | loss=1.3616, acc=0.4552, macroF1=0.4441
+
+16/11/2025 23:24:12 >> [train] epoch 75 | loss=1.5273
+
+16/11/2025 23:24:12 >> [test] | loss=1.3843, acc=0.4712
+16/11/2025 23:24:12 >> [test] epoch 75 | loss=1.3843, acc=0.4712, macroF1=0.4528
+
+16/11/2025 23:24:20 >> [train] epoch 76 | loss=1.5179
+
+16/11/2025 23:24:20 >> [test] | loss=1.4328, acc=0.4338
+16/11/2025 23:24:20 >> [test] epoch 76 | loss=1.4328, acc=0.4338, macroF1=0.4184
+
+16/11/2025 23:24:28 >> [train] epoch 77 | loss=1.5077
+
+16/11/2025 23:24:28 >> [test] | loss=1.3953, acc=0.4469
+16/11/2025 23:24:28 >> [test] epoch 77 | loss=1.3953, acc=0.4469, macroF1=0.4349
+
+16/11/2025 23:24:36 >> [train] epoch 78 | loss=1.5305
+
+16/11/2025 23:24:36 >> [test] | loss=1.3605, acc=0.4443
+16/11/2025 23:24:36 >> [test] epoch 78 | loss=1.3605, acc=0.4443, macroF1=0.4341
+
+16/11/2025 23:24:45 >> [train] epoch 79 | loss=1.5094
+
+16/11/2025 23:24:45 >> [test] | loss=1.4084, acc=0.4392
+16/11/2025 23:24:45 >> [test] epoch 79 | loss=1.4084, acc=0.4392, macroF1=0.4232
+
+16/11/2025 23:24:55 >> [train] epoch 80 | loss=1.5198
+
+16/11/2025 23:24:55 >> [test] | loss=1.3808, acc=0.4515
+16/11/2025 23:24:55 >> [test] epoch 80 | loss=1.3808, acc=0.4515, macroF1=0.4359
+
+16/11/2025 23:25:03 >> [train] epoch 81 | loss=1.5134
+
+16/11/2025 23:25:04 >> [test] | loss=1.3790, acc=0.4529
+16/11/2025 23:25:04 >> [test] epoch 81 | loss=1.3790, acc=0.4529, macroF1=0.4351
+
+16/11/2025 23:25:12 >> [train] epoch 82 | loss=1.5222
+
+16/11/2025 23:25:12 >> [test] | loss=1.3867, acc=0.4580
+16/11/2025 23:25:12 >> [test] epoch 82 | loss=1.3867, acc=0.4580, macroF1=0.4389
+
+16/11/2025 23:25:20 >> [train] epoch 83 | loss=1.5197
+
+16/11/2025 23:25:20 >> [test] | loss=1.3728, acc=0.4535
+16/11/2025 23:25:20 >> [test] epoch 83 | loss=1.3728, acc=0.4535, macroF1=0.4323
+
+16/11/2025 23:25:28 >> [train] epoch 84 | loss=1.5201
+
+16/11/2025 23:25:28 >> [test] | loss=1.3509, acc=0.4618
+16/11/2025 23:25:28 >> [test] epoch 84 | loss=1.3509, acc=0.4618, macroF1=0.4480
+
+16/11/2025 23:25:36 >> [train] epoch 85 | loss=1.5168
+
+16/11/2025 23:25:36 >> [test] | loss=1.3642, acc=0.4449
+16/11/2025 23:25:36 >> [test] epoch 85 | loss=1.3642, acc=0.4449, macroF1=0.4379
+
+16/11/2025 23:25:44 >> [train] epoch 86 | loss=1.5192
+
+16/11/2025 23:25:45 >> [test] | loss=1.3640, acc=0.4506
+16/11/2025 23:25:45 >> [test] epoch 86 | loss=1.3640, acc=0.4506, macroF1=0.4420
+
+16/11/2025 23:25:52 >> [train] epoch 87 | loss=1.5168
+
+16/11/2025 23:25:53 >> [test] | loss=1.3669, acc=0.4546
+16/11/2025 23:25:53 >> [test] epoch 87 | loss=1.3669, acc=0.4546, macroF1=0.4488
+
+16/11/2025 23:26:00 >> [train] epoch 88 | loss=1.5245
+
+16/11/2025 23:26:01 >> [test] | loss=1.3548, acc=0.4814
+16/11/2025 23:26:01 >> [test] epoch 88 | loss=1.3548, acc=0.4814, macroF1=0.4724
+
+16/11/2025 23:26:02 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:26:11 >> [train] epoch 89 | loss=1.5222
+
+16/11/2025 23:26:11 >> [test] | loss=1.3590, acc=0.4854
+16/11/2025 23:26:11 >> [test] epoch 89 | loss=1.3590, acc=0.4854, macroF1=0.4807
+
+16/11/2025 23:26:13 >> Saving ckpt at ./outputs/strats|pos:pos_1/checkpoint_best.bin
+
+16/11/2025 23:26:21 >> [train] epoch 90 | loss=1.5090
+
+16/11/2025 23:26:21 >> [test] | loss=1.3494, acc=0.4743
+16/11/2025 23:26:21 >> [test] epoch 90 | loss=1.3494, acc=0.4743, macroF1=0.4601
+
+16/11/2025 23:26:29 >> [train] epoch 91 | loss=1.5098
+
+16/11/2025 23:26:30 >> [test] | loss=1.3498, acc=0.4663
+16/11/2025 23:26:30 >> [test] epoch 91 | loss=1.3498, acc=0.4663, macroF1=0.4586
+
+16/11/2025 23:26:38 >> [train] epoch 92 | loss=1.5159
+
+16/11/2025 23:26:38 >> [test] | loss=1.3801, acc=0.4658
+16/11/2025 23:26:38 >> [test] epoch 92 | loss=1.3801, acc=0.4658, macroF1=0.4554
+
+16/11/2025 23:26:46 >> [train] epoch 93 | loss=1.5034
+
+16/11/2025 23:26:46 >> [test] | loss=1.3790, acc=0.4512
+16/11/2025 23:26:46 >> [test] epoch 93 | loss=1.3790, acc=0.4512, macroF1=0.4422
+
+16/11/2025 23:26:55 >> [train] epoch 94 | loss=1.5059
+
+16/11/2025 23:26:55 >> [test] | loss=1.3280, acc=0.4697
+16/11/2025 23:26:55 >> [test] epoch 94 | loss=1.3280, acc=0.4697, macroF1=0.4624
+
+16/11/2025 23:27:03 >> [train] epoch 95 | loss=1.5155
+
+16/11/2025 23:27:04 >> [test] | loss=1.3592, acc=0.4737
+16/11/2025 23:27:04 >> [test] epoch 95 | loss=1.3592, acc=0.4737, macroF1=0.4647
+
+16/11/2025 23:27:12 >> [train] epoch 96 | loss=1.4978
+
+16/11/2025 23:27:12 >> [test] | loss=1.3423, acc=0.4686
+16/11/2025 23:27:12 >> [test] epoch 96 | loss=1.3423, acc=0.4686, macroF1=0.4595
+
+16/11/2025 23:27:19 >> [train] epoch 97 | loss=1.4992
+
+16/11/2025 23:27:20 >> [test] | loss=1.3853, acc=0.4455
+16/11/2025 23:27:20 >> [test] epoch 97 | loss=1.3853, acc=0.4455, macroF1=0.4341
+
+16/11/2025 23:27:28 >> [train] epoch 98 | loss=1.5029
+
+16/11/2025 23:27:28 >> [test] | loss=1.3263, acc=0.4792
+16/11/2025 23:27:28 >> [test] epoch 98 | loss=1.3263, acc=0.4792, macroF1=0.4672
+
+16/11/2025 23:27:36 >> [train] epoch 99 | loss=1.5067
+
+16/11/2025 23:27:37 >> [test] | loss=1.3585, acc=0.4595
+16/11/2025 23:27:37 >> [test] epoch 99 | loss=1.3585, acc=0.4595, macroF1=0.4505
+
+16/11/2025 23:27:45 >> [train] epoch 100 | loss=1.4948
+
+16/11/2025 23:27:45 >> [test] | loss=1.3429, acc=0.4595
+16/11/2025 23:27:45 >> [test] epoch 100 | loss=1.3429, acc=0.4595, macroF1=0.4475
+
+16/11/2025 23:27:45 >> [pos_1] Best epoch: 89
+16/11/2025 23:27:45 >> Best TEST Acc   : 0.4854
+16/11/2025 23:27:45 >> Best TEST MacroF1: 0.4807
+
+16/11/2025 23:27:45 >> === Classification Report (best) ===
+              precision    recall  f1-score   support
+
+           0     0.7103    0.7055    0.7079       146
+           1     0.5878    0.5959    0.5918       146
+           2     0.5818    0.6575    0.6174       146
+           3     0.6418    0.5890    0.6143       146
+           4     0.4641    0.6644    0.5465       146
+           5     0.4375    0.3836    0.4088       146
+           6     0.5888    0.4315    0.4980       146
+           7     0.4902    0.3425    0.4032       146
+           8     0.3313    0.3699    0.3495       146
+           9     0.4197    0.5548    0.4779       146
+          10     0.4615    0.5753    0.5122       146
+          11     0.5321    0.5685    0.5497       146
+          12     0.4286    0.3493    0.3849       146
+          13     0.3172    0.3151    0.3162       146
+          14     0.4524    0.3904    0.4191       146
+          15     0.4812    0.4384    0.4588       146
+          16     0.6200    0.6370    0.6284       146
+          17     0.3934    0.6575    0.4923       146
+          18     0.6102    0.4932    0.5455       146
+          19     0.3636    0.4932    0.4186       146
+          20     0.3708    0.2260    0.2809       146
+          21     0.5000    0.2055    0.2913       146
+          22     0.6636    0.5000    0.5703       146
+          23     0.4111    0.5068    0.4540       146
+
+    accuracy                         0.4854      3504
+   macro avg     0.4941    0.4854    0.4807      3504
+weighted avg     0.4941    0.4854    0.4807      3504
+
