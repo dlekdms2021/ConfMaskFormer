@@ -1,0 +1,10 @@
+K-Fold Best-by-Fold Summary
+===========================
+pos_0: acc=0.4229, macroF1=0.3993
+pos_1: acc=0.5557, macroF1=0.5483
+pos_2: acc=0.5194, macroF1=0.5097
+pos_3: acc=0.4786, macroF1=0.4623
+pos_4: acc=0.4405, macroF1=0.4329
+
+Avg ACC     : 0.4834  (± 0.0491)
+Avg Macro-F1: 0.4705  (± 0.0532)
