@@ -1,0 +1,11 @@
+Configuration,Confidence Gate,Auxiliary Loss,Beacon Dropout,Combined Input,Avg Accuracy,Std Accuracy,Details
+Full Model,True,True,True,True,0.5201800000000001,0.05435289872674686,"{'pos_3': 0.516, 'pos_2': 0.5611, 'pos_1': 0.5987, 'pos_4': 0.4742, 'pos_0': 0.4509}"
+CG + AL + BD,True,True,True,False,0.5188200000000001,0.05058740554723084,"{'pos_3': 0.5006, 'pos_2': 0.5565, 'pos_1': 0.5973, 'pos_4': 0.4765, 'pos_0': 0.4632}"
+AL + BD + CI,False,True,True,True,0.51482,0.05489307424438896,"{'pos_3': 0.5108, 'pos_2': 0.5628, 'pos_1': 0.5888, 'pos_4': 0.4685, 'pos_0': 0.4432}"
+Beacon Dropout,False,False,True,False,0.51234,0.0513406895162112,"{'pos_3': 0.4897, 'pos_2': 0.5505, 'pos_1': 0.591, 'pos_4': 0.4824, 'pos_0': 0.4481}"
+CG + BD + CI,True,False,True,True,0.51216,0.05570298376209304,"{'pos_3': 0.5203, 'pos_2': 0.5591, 'pos_1': 0.5813, 'pos_4': 0.4694, 'pos_0': 0.4307}"
+CG + AL + CI,True,True,False,True,0.49234,0.06130691967469903,"{'pos_3': 0.4892, 'pos_2': 0.5397, 'pos_1': 0.5799, 'pos_4': 0.4362, 'pos_0': 0.4167}"
+Combined Input,False,False,False,True,0.48448,0.0560315054232884,"{'pos_3': 0.4863, 'pos_2': 0.5314, 'pos_1': 0.5579, 'pos_4': 0.4413, 'pos_0': 0.4055}"
+Confidence Gate,True,False,False,False,0.48342,0.04908561500073111,"{'pos_3': 0.4786, 'pos_2': 0.5194, 'pos_1': 0.5557, 'pos_4': 0.4405, 'pos_0': 0.4229}"
+Auxiliary Loss,False,True,False,False,0.47969999999999996,0.036496136781856786,"{'pos_3': 0.4752, 'pos_2': 0.5134, 'pos_1': 0.5283, 'pos_4': 0.4484, 'pos_0': 0.4332}"
+Baseline,False,False,False,False,0.47298,0.03665402569977817,"{'pos_3': 0.4683, 'pos_2': 0.5, 'pos_1': 0.5277, 'pos_4': 0.4334, 'pos_0': 0.4355}"

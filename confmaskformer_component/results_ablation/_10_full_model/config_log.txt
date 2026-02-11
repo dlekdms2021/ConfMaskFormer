@@ -1,0 +1,1 @@
+[CONFIG] Confidence Gate: True | Auxiliary Loss: True | Beacon Dropout: True | Combined Input: True
